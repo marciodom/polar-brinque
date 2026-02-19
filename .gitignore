@@ -1,0 +1,62 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Termux / Linux
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Node / PWA (caso use futuramente)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build / cache
+dist/
+build/
+.cache/
+# -------------------------
+# Enviar somente 3 arquivos
+* 
+
+!index.html
+!sw.js
+!manifest.json
+!.gitignore
+
+# Editor
+.vscode/
+.idea/
+
+# Arquivos sensíveis
+.env
+.env.local
+
+# Backup
+*.bak
+# -------------------------
+# Enviar somente arquivos do PWA
+*
+
+!index.html
+!sw.js
+!manifest.json
+!icon-192.png
+!icon-512.png
+!.gitignore
+
+# Enviar somente arquivos do PWA
+*
+
+!index.html
+!sw.js
+!manifest.json
+!icon-192.png
+!icon-512.png
+!favicon.png
+!.gitignore
+
