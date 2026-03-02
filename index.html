@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polar_Brinque</title>
     <!-- Manifest PWA -->
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <!-- Ícone para iOS (quando adicionar à tela de início) -->
-    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
     <!-- Favicon original -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
     <!-- Font Awesome (HTTPS) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- html2canvas (HTTPS) -->
@@ -614,11 +614,11 @@
             toleranciaMinutos: 1
         };
         
-        // Áudio do final do evento (HTTPS)
-        const audioFinal = new Audio('https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3');
+        // Áudio do final do evento (agora local)
+        const audioFinal = new Audio('audio/tantas.mp3');
         audioFinal.preload = 'auto';
         
-        // Áudio de início de evento
+        // Áudio de início de evento (permanece o mesmo)
         const audioInicio = new Audio("data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==");
         audioInicio.volume = 0.6;
         
