@@ -1,12 +1,12 @@
-const CACHE_NAME = 'polar-brinque-v5';
+const CACHE_NAME = 'polar-brinque-v6';
 
 const urlsToCache = [
-  './',
-  './index.html',
-  './manifest.json',
-  './icons/icon-192.png',
-  './icons/icon-512.png',
-  './audio/tantas.mp3'
+  '/polar-brinque/',
+  '/polar-brinque/index.html',
+  '/polar-brinque/manifest.json',
+  '/polar-brinque/icons/icon-192.png',
+  '/polar-brinque/icons/icon-512.png',
+  '/polar-brinque/audio/tantas.mp3'
 ];
 
 // Instalação
@@ -21,11 +21,11 @@ self.addEventListener('install', event => {
 // Ativação
 self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then(cacheNames =>
+    caches.keys().then(keys =>
       Promise.all(
-        cacheNames.map(cacheName => {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
+        keys.map(key => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
           }
         })
       )
@@ -33,7 +33,7 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Cache First
+// Estratégia Cache First
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
