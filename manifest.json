@@ -6,11 +6,13 @@
   "start_url": "/polar-brinque/",
   "scope": "/polar-brinque/",
   "display": "standalone",
+  "display_override": ["standalone", "browser"],
   "orientation": "portrait",
   "lang": "pt-BR",
   "background_color": "#f0f7ff",
   "theme_color": "#ffcc00",
   "categories": ["business", "productivity"],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "icons/icon-192.png",
