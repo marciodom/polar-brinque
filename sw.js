@@ -1,4 +1,4 @@
-const CACHE_NAME = 'polar-brinque-v3';
+const CACHE_NAME = 'polar-brinque-v4';
 
 const urlsToCache = [
   './',
