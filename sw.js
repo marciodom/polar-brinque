@@ -1,7 +1,6 @@
-const CACHE_NAME = 'polar-brinque-v6';
+const CACHE_NAME = 'polar-brinque-v7';
 
 const urlsToCache = [
-  '/polar-brinque/',
   '/polar-brinque/index.html',
   '/polar-brinque/manifest.json',
   '/polar-brinque/icons/icon-192.png',
@@ -14,7 +13,16 @@ self.addEventListener('install', event => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+      .then(cache => {
+        // Adiciona cada recurso individualmente, ignorando falhas
+        return Promise.allSettled(
+          urlsToCache.map(url => 
+            cache.add(url).catch(err => {
+              console.warn('Falha ao adicionar ao cache:', url, err);
+            })
+          )
+        );
+      })
   );
 });
 
@@ -33,7 +41,7 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Estratégia Cache First
+// Estratégia Cache First com fallback para rede
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
