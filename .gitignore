@@ -19,14 +19,6 @@ yarn-error.log*
 dist/
 build/
 .cache/
-# -------------------------
-# Enviar somente 3 arquivos
-* 
-
-!index.html
-!sw.js
-!manifest.json
-!.gitignore
 
 # Editor
 .vscode/
@@ -38,25 +30,20 @@ build/
 
 # Backup
 *.bak
-# -------------------------
-# Enviar somente arquivos do PWA
-*
 
+# Não bloquear pastas necessárias
+!icons/
+!icons/*
+!audio/
+!audio/*
+
+# Permitir arquivos importantes na raiz
 !index.html
 !sw.js
 !manifest.json
-!icon-192.png
-!icon-512.png
 !.gitignore
-
-# Enviar somente arquivos do PWA
-*
-
-!index.html
-!sw.js
-!manifest.json
 !icon-192.png
 !icon-512.png
 !favicon.png
-!.gitignore
-
+!*.md
+!LICENSE

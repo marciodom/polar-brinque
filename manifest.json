@@ -1,7 +1,7 @@
 {
   "id": "/polar-brinque/",
   "name": "Polar Brinque",
-  "short_name": "Polar",
+  "short_name": "Polar-brinque",
   "description": "Sistema PWA para controle e gerenciamento de locação de brinquedos em praças públicas.",
   "start_url": "/polar-brinque/",
   "scope": "/polar-brinque/",

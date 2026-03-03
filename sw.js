@@ -5,7 +5,8 @@ const urlsToCache = [
   '/polar-brinque/manifest.json',
   '/polar-brinque/icons/icon-192.png',
   '/polar-brinque/icons/icon-512.png',
-  '/polar-brinque/audio/tantas.mp3'
+'/polar-brinque/audio/tantas.mp3'
+  
 ];
 
 // Instalação
